@@ -1,1 +1,25 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/8800aa4cd1dad9022288b0caa20fb4d0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110533Z&X-Amz-Expires=3600&X-Amz-Signature=50956ef083b5e53662883df36e5fec16df5b17dcdcf7f59d45706252c55939c4&X-Amz-SignedHeaders=host","uri":null}}
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "base-lyra",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "iconLibrary": "lucide",
+  "rtl": false,
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "menuColor": "default",
+  "menuAccent": "subtle",
+  "registries": {}
+}

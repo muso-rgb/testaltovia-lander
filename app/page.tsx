@@ -1,1 +1,19 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/53d68afb1a9d1547625aee3037628950?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110531Z&X-Amz-Expires=3600&X-Amz-Signature=f2ad8f271b0e2dc4316df446c8f9e9471afa82ccbda7965480e1f6cd0cbec310&X-Amz-SignedHeaders=host","uri":null}}
+import { pageContent } from "@/content/load-content"
+import { SectionRenderer } from "@/components/sections/section-renderer"
+
+/**
+ * Landing page — rendered entirely from content/content.json.
+ *
+ * To edit copy: modify content/content.json
+ * To reorder sections: reorder the `sections` array in content.json
+ * To add/remove sections: add/remove entries and update section-renderer.tsx
+ */
+export default function Page() {
+  return (
+    <main>
+      {pageContent.sections.map((section, i) => (
+        <SectionRenderer key={`${section.type}-${i}`} section={section} />
+      ))}
+    </main>
+  )
+}

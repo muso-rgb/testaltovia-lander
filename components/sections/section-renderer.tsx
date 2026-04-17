@@ -1,1 +1,39 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/5ae48530e8745bc637cbd85c487d3ede?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110543Z&X-Amz-Expires=3600&X-Amz-Signature=7367e9fd18ae6093f08c5433fb3b459e81c9d21f7752320216b7cd89d1fea0df&X-Amz-SignedHeaders=host","uri":null}}
+/**
+ * section-renderer.tsx
+ *
+ * Maps a section's `type` discriminant to its component.
+ * The switch statement is the only place that needs updating when adding a
+ * new section type. The `never` fallback enforces exhaustiveness at compile time:
+ * if a new type is added to SectionContent without a matching case, tsc errors.
+ */
+
+import type { SectionContent } from "@/content/schema"
+import { HeroSection } from "./hero-section"
+import { BenefitsSection } from "./benefits-section"
+import { TestimonialsSection } from "./testimonials-section"
+import { CtaSection } from "./cta-section"
+import { FaqSection } from "./faq-section"
+
+interface SectionRendererProps {
+  section: SectionContent
+}
+
+export function SectionRenderer({ section }: SectionRendererProps) {
+  switch (section.type) {
+    case "hero":
+      return <HeroSection content={section} />
+    case "benefits":
+      return <BenefitsSection content={section} />
+    case "testimonials":
+      return <TestimonialsSection content={section} />
+    case "cta":
+      return <CtaSection content={section} />
+    case "faq":
+      return <FaqSection content={section} />
+    default: {
+      // Exhaustiveness check: this line errors if a new union member has no case
+      const _exhaustive: never = section
+      return null
+    }
+  }
+}

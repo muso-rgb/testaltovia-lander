@@ -1,1 +1,53 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/7af35390cd074b457cd4c117398d2c8b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110537Z&X-Amz-Expires=3600&X-Amz-Signature=161f5b8778a4b2d73a2f9fe584359825ea4b7e18f125357bd512b5a24331ff73&X-Amz-SignedHeaders=host","uri":null}}
+"use client"
+
+import Link from "next/link"
+import { motion } from "motion/react"
+import { Button } from "@/components/ui/button"
+import { fadeUp, stagger, viewport } from "@/lib/motion"
+import type { CtaSectionContent } from "@/content/schema"
+
+interface CtaSectionProps {
+  content: CtaSectionContent
+}
+
+export function CtaSection({ content }: CtaSectionProps) {
+  return (
+    <section
+      id="cta"
+      className="border-t border-border bg-primary text-primary-foreground"
+    >
+      <motion.div
+        className="mx-auto max-w-5xl px-6 py-28"
+        initial="hidden"
+        whileInView="show"
+        viewport={viewport}
+        variants={stagger(0.1)}
+      >
+        {/* Split layout: heading left, description + CTA right */}
+        <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between md:gap-20">
+          <motion.h2
+            variants={fadeUp}
+            className="max-w-xs text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
+          >
+            {content.heading}
+          </motion.h2>
+          <motion.div
+            variants={fadeUp}
+            className="flex max-w-sm flex-col items-start gap-8 md:items-end md:text-right"
+          >
+            <p className="text-sm leading-relaxed text-primary-foreground/70">
+              {content.description}
+            </p>
+            <Button
+              variant={content.button.variant ?? "secondary"}
+              size={content.button.size ?? "lg"}
+              render={<Link href={content.button.href} />}
+            >
+              {content.button.label}
+            </Button>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  )
+}

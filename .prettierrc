@@ -1,1 +1,11 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/4d2c25d0d05c1a2ca079ddbeeeb758de?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110512Z&X-Amz-Expires=3600&X-Amz-Signature=2711f955781ceae5a52d33e7ca8c141dbf705c2c2c0b244eeaf93a41b693f7db&X-Amz-SignedHeaders=host","uri":null}}
+{
+  "endOfLine": "lf",
+  "semi": false,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "app/globals.css",
+  "tailwindFunctions": ["cn", "cva"]
+}
