@@ -1,1 +1,25 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/a04ad3e3967f86577d92efd04d882b7f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110601Z&X-Amz-Expires=3600&X-Amz-Signature=2ef8503a83f6e60d3b78aa7ff939e074f95d07a87709b40e5c61c6cd60f998b1&X-Amz-SignedHeaders=host","uri":null}}
+import type { Variants } from "motion/react"
+
+// Bezier curve as a const tuple so Motion's type checker accepts it
+const EASE = [0.16, 1, 0.3, 1] as const
+
+// Shared fade-up variant used across all sections
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: EASE },
+  },
+}
+
+// Parent variant that staggers children — pair with fadeUp on children
+export function stagger(delay = 0.09, delayChildren = 0): Variants {
+  return {
+    hidden: {},
+    show: { transition: { staggerChildren: delay, delayChildren } },
+  }
+}
+
+// Shared viewport config for whileInView
+export const viewport = { once: true, margin: "-80px" } as const

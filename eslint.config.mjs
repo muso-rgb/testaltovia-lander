@@ -1,1 +1,18 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/dfa1f5f6a7037bf39dc510f30b180002?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110559Z&X-Amz-Expires=3600&X-Amz-Signature=65a3f005f08588198fd7d4d90b3a60de79d06d3399f59b1139df80743ce36057&X-Amz-SignedHeaders=host","uri":null}}
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
+
+export default eslintConfig;

@@ -1,1 +1,52 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/818c2d4c71e95815bd1bd97e526b92da?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110550Z&X-Amz-Expires=3600&X-Amz-Signature=f7b43873b97717c0644e13235343e7ec87a019ad1f8ba42066be72c437509776&X-Amz-SignedHeaders=host","uri":null}}
+"use client"
+
+import { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
+import { Moon, Sun } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
+
+export function ThemeToggle() {
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  // Avoid hydration mismatch — render only after mount
+  useEffect(() => setMounted(true), [])
+
+  if (!mounted) return null
+
+  const isDark = resolvedTheme === "dark"
+
+  return (
+    <motion.button
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="fixed right-5 top-5 z-50 flex size-9 items-center justify-center border border-border bg-background text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      whileTap={{ scale: 0.92 }}
+      transition={{ duration: 0.1 }}
+    >
+      <AnimatePresence mode="wait" initial={false}>
+        {isDark ? (
+          <motion.span
+            key="sun"
+            initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
+            animate={{ opacity: 1, rotate: 0, scale: 1 }}
+            exit={{ opacity: 0, rotate: 90, scale: 0.8 }}
+            transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <Sun size={14} strokeWidth={1.5} />
+          </motion.span>
+        ) : (
+          <motion.span
+            key="moon"
+            initial={{ opacity: 0, rotate: 90, scale: 0.8 }}
+            animate={{ opacity: 1, rotate: 0, scale: 1 }}
+            exit={{ opacity: 0, rotate: -90, scale: 0.8 }}
+            transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <Moon size={14} strokeWidth={1.5} />
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </motion.button>
+  )
+}

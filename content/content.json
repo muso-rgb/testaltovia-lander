@@ -100,11 +100,11 @@
       "items": [
         {
           "question": "How is Altovia different from Google Flights or Kayak?",
-          "answer": "Google Flights and Kayak are search tools — you fill out forms and scroll results. Altovia is your travel AI: describe what you want, and it searches, plans, and optimises for you. Flights, hotels, activities, points, and local tips — all in one app, no switching required."
+          "answer": "Google Flights and Kayak are search tools — you fill out forms and scroll results. Altovia is your travel AI: describe what you want, and it searches, plans, and optimises for you. Flights, hotels, activities, points, and local tips — all in one app."
         },
         {
           "question": "Does Altovia really find cheaper flights?",
-          "answer": "Yes — Altovia searches across major airlines in real-time, including deals that are hard to surface manually. It's especially powerful for business class and award redemptions that most travellers miss."
+          "answer": "Yes — Altovia searches across major airlines in real-time, including deals that are hard to surface manually. Especially powerful for business class and award redemptions that most travellers miss."
         },
         {
           "question": "What if I already like searching for points deals?",

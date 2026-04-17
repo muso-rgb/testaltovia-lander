@@ -1,1 +1,71 @@
-{"content":{"file_downloaded":false,"mimeType":"text/plain","s3url":"https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/265222/github/GITHUB_GET_RAW_REPOSITORY_CONTENT/response/676cb26b1b800af72a249a4adfab205a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260417T110546Z&X-Amz-Expires=3600&X-Amz-Signature=ab45d47d620807a503ca1aa496eca5d6bf288db3600ee5bbba487453548822b0&X-Amz-SignedHeaders=host","uri":null}}
+"use client"
+
+import * as React from "react"
+import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes"
+
+function ThemeProvider({
+  children,
+  ...props
+}: React.ComponentProps<typeof NextThemesProvider>) {
+  return (
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+      {...props}
+    >
+      <ThemeHotkey />
+      {children}
+    </NextThemesProvider>
+  )
+}
+
+function isTypingTarget(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) {
+    return false
+  }
+
+  return (
+    target.isContentEditable ||
+    target.tagName === "INPUT" ||
+    target.tagName === "TEXTAREA" ||
+    target.tagName === "SELECT"
+  )
+}
+
+function ThemeHotkey() {
+  const { resolvedTheme, setTheme } = useTheme()
+
+  React.useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.defaultPrevented || event.repeat) {
+        return
+      }
+
+      if (event.metaKey || event.ctrlKey || event.altKey) {
+        return
+      }
+
+      if (event.key.toLowerCase() !== "d") {
+        return
+      }
+
+      if (isTypingTarget(event.target)) {
+        return
+      }
+
+      setTheme(resolvedTheme === "dark" ? "light" : "dark")
+    }
+
+    window.addEventListener("keydown", onKeyDown)
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown)
+    }
+  }, [resolvedTheme, setTheme])
+
+  return null
+}
+
+export { ThemeProvider }
