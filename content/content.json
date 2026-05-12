@@ -2,12 +2,12 @@
   "sections": [
     {
       "type": "hero",
-      "badge": "✈️ Your Smart Travel Companion",
-      "heading": "Fly Anywhere.\nPay Less with Altovia.",
-      "subheading": "Altovia is the flight app that finds you insanely cheap flights in seconds — economy, business class, and first class deals included. No more tab hell. Just tap, book, fly.",
+      "badge": "🤖 AI Agent for Small Business",
+      "heading": "Stop Doing Work\nAI Can Do For You.",
+      "subheading": "Pluto is your AI team member — it connects to your tools, handles your repetitive workflows, and works 24/7 so you can focus on growing your business. No developers. No six-month rollouts. Just results.",
       "buttons": [
         {
-          "label": "Download Free",
+          "label": "Get Early Access",
           "href": "#cta",
           "variant": "default",
           "size": "lg"
@@ -22,101 +22,101 @@
     },
     {
       "type": "benefits",
-      "heading": "Why Altovia is Amazing",
-      "subheading": "We built the flight app we always wished existed.",
+      "heading": "Built for Businesses That Can’t Afford to Waste Time",
+      "subheading": "Pluto handles the work that slows you down — so your team can focus on the work that grows your business.",
       "items": [
         {
-          "icon": "Plane",
-          "title": "Ridiculously Cheap Flights",
-          "description": "Altovia scans hundreds of airlines and routes in real-time to surface the cheapest fares available — including business class and first class deals you'd never find on your own."
-        },
-        {
           "icon": "Zap",
-          "title": "Instant AI Search",
-          "description": "Just tell Altovia where you want to go. Our AI searches, compares, and recommends the best options in seconds — no forms, no tabs, no stress."
+          "title": "Live in Minutes, Not Months",
+          "description": "Connect Pluto to your existing tools and it starts working the same day. No developers required, no six-month rollouts, no $50K project scopes. Set it up in minutes — seriously."
         },
         {
-          "icon": "Map",
-          "title": "AI Trip Planner",
-          "description": "Beyond flights, Altovia plans your whole trip — local hotspots, hidden gems, itineraries tailored to your vibe. Like having a travel expert on speed dial."
+          "icon": "Users",
+          "title": "The Team Member You Can Actually Afford",
+          "description": "A full-time operations hire costs $50K–$70K a year. Pluto starts at $49/month and works 24/7, never calls in sick, and never forgets a follow-up."
         },
         {
-          "icon": "Award",
-          "title": "Points & Miles Optimiser",
-          "description": "Connect your loyalty programs and let Altovia spot the award redemptions you'd miss. Get first class flights using miles you forgot you had."
+          "icon": "Layers",
+          "title": "Works Where Your Team Already Works",
+          "description": "Pluto shows up in Slack, WhatsApp, Telegram, or wherever your team communicates. No new dashboards. No training. Just message it like a colleague and it gets to work."
         },
         {
-          "icon": "Clock",
-          "title": "Goodbye Tab Hell",
-          "description": "One app replaces Kayak, Google Flights, Skyscanner, and your points spreadsheet. Everything in a couple of taps — seriously."
+          "icon": "RefreshCw",
+          "title": "Handles Your Most Repetitive Tasks",
+          "description": "Follow-ups, data entry, report pulls, vendor communications, client onboarding — Pluto handles the workflows that eat your day so you can focus on what actually moves the needle."
         },
         {
-          "icon": "Globe",
-          "title": "Global Coverage",
-          "description": "From weekend getaways to round-the-world trips, Altovia covers major airlines departing from anywhere. Budget escapes and premium cabin upgrades — all in one place."
+          "icon": "Shield",
+          "title": "Secure and Private by Design",
+          "description": "Your data stays yours. Pluto runs in a secure cloud with enterprise-grade encryption, never trains on your business data, and never shares information across clients."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Scale Without the Headcount",
+          "description": "Growing your business shouldn’t mean hiring more people for operational work. Pluto scales with you — handling more volume without more cost."
         }
       ]
     },
     {
       "type": "testimonials",
-      "heading": "Real Trips. Real Savings.",
-      "subheading": "People who switched from Kayak, Google Flights, and all the rest.",
+      "heading": "Small Businesses. Real Results.",
+      "subheading": "Owners who stopped drowning in operations and started growing.",
       "items": [
         {
-          "quote": "I found a business class seat to Tokyo for less than what I used to pay for economy on other apps. Altovia is genuinely unreal. I'm never going back.",
-          "author": "Jessica M.",
-          "role": "Frequent Flyer",
-          "company": "Travels 15+ times a year"
+          "quote": "I was spending 3 hours a day on follow-ups and data entry. Pluto handles all of it now. I got those 3 hours back every single day. For $49 a month, it’s the best hire I’ve ever made.",
+          "author": "Sarah K.",
+          "role": "Owner",
+          "company": "Boutique marketing agency, 8 employees"
         },
         {
-          "quote": "The AI trip planner blew my mind. Told it I wanted a week in Lisbon on a budget — it gave me a full itinerary with local spots I never would've found. Like having a friend who's been everywhere.",
-          "author": "Marcus T.",
-          "role": "Digital Nomad",
-          "company": "Works remotely from new cities"
+          "quote": "I couldn’t justify hiring an operations manager. Pluto does most of what I needed one for — pulling reports, sending follow-ups, managing vendor comms. We’ve grown 40% this year without adding a single ops hire.",
+          "author": "James R.",
+          "role": "Founder",
+          "company": "E-commerce brand, 12 employees"
         },
         {
-          "quote": "Got a first class flight to Paris using miles I forgot I had. The app basically paid for itself on the first use. Altovia is a game-changer.",
-          "author": "Priya S.",
-          "role": "Points Collector",
-          "company": "Chase Sapphire & United MileagePlus"
+          "quote": "Setup took 20 minutes. I connected it to my email and CRM, told it what to do, and it started working. No developers, no IT tickets, nothing. I wish I’d done this two years ago.",
+          "author": "Maria L.",
+          "role": "CEO",
+          "company": "Professional services firm, 6 employees"
         }
       ]
     },
     {
       "type": "cta",
-      "heading": "Your Best Trip Yet Starts Here.",
-      "description": "Download Altovia free. Full access to AI trip planning, cheap flight search, and points optimisation. No credit card. No stress. Just amazing trips.",
+      "heading": "Your Business Deserves an AI That Does the Work.",
+      "description": "Early access is limited. Join the waitlist and be among the first small businesses to put a secure, capable AI agent to work — starting at $49/month.",
       "button": {
-        "label": "Download Altovia Free",
-        "href": "https://www.altovia.app/",
+        "label": "Join the Waitlist",
+        "href": "https://hirepluto.ai/",
         "variant": "secondary",
         "size": "lg"
       }
     },
     {
       "type": "faq",
-      "heading": "Got Questions?",
-      "subheading": "Real talk about how Altovia compares.",
+      "heading": "Questions? We’ve Got Answers.",
+      "subheading": "Everything small business owners ask us before getting started.",
       "items": [
         {
-          "question": "How is Altovia different from Google Flights or Kayak?",
-          "answer": "Google Flights and Kayak are search tools — you fill out forms and scroll results. Altovia is your travel AI: describe what you want, and it searches, plans, and optimises for you. Flights, hotels, activities, points, and local tips — all in one app."
+          "question": "Do I need developers or IT to set this up?",
+          "answer": "Not at all. Pluto connects to your existing tools — email, CRM, project management, Slack — in minutes. No code, no developers, no IT tickets. If you can send a message, you can use Pluto."
         },
         {
-          "question": "Does Altovia really find cheaper flights?",
-          "answer": "Yes — Altovia searches across major airlines in real-time, including deals that are hard to surface manually. Especially powerful for business class and award redemptions that most travellers miss."
+          "question": "How is Pluto different from ChatGPT or other AI tools?",
+          "answer": "ChatGPT answers questions. Pluto takes action. It connects directly to your tools, follows up with real people, pulls real data, and completes real workflows — it doesn’t just give you suggestions and leave you to do the work."
         },
         {
-          "question": "What if I already like searching for points deals?",
-          "answer": "Altovia is built for you then. Connect your loyalty programs and it surfaces the best award redemptions across all your accounts — the ones that actually make sense. You still call the shots; Altovia just makes sure you see every option."
+          "question": "Is my business data safe?",
+          "answer": "Yes. Your data stays yours — always. Pluto runs in a secure cloud environment with enterprise-grade encryption. It does not train on your data and does not share information between clients. Built for businesses that handle sensitive operations."
         },
         {
-          "question": "Is Altovia free?",
-          "answer": "Yes — free to download with a 7-day trial of all Pro features. No credit card needed to start. After that, pick a plan that works for how often you travel."
+          "question": "What does it actually cost?",
+          "answer": "Pluto starts at $49/month for the Starter plan — deployment, maintenance, tool connectors, and the full skills library included. Compare that to a $55K/year operations hire. Pro plan at $299/month adds AI tokens, all connectors, and priority support."
         },
         {
-          "question": "Is this just another app I won't use?",
-          "answer": "Altovia replaces 4–5 things you already do separately (flight search, price alerts, trip planning, points tracking). It's less apps, not more — and it actually saves you money from day one."
+          "question": "What kinds of tasks can Pluto handle?",
+          "answer": "Client follow-ups, report generation, data entry, vendor communications, onboarding workflows, scheduling, CRM updates, and much more. If it’s repetitive and lives in your digital tools, Pluto can handle it."
         }
       ]
     }
